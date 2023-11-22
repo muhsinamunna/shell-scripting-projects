@@ -1,5 +1,15 @@
 #!/bin/bash
 
+############
+# Author-Muhsina
+# Date-nov -2023
+# fist you need to write the url of the github Api
+# then export the username and token as arguments
+# then give the organaization name and repo name
+#############
+
+helper()
+
 # GitHub API URL
 API_URL="https://api.github.com"
 
@@ -35,6 +45,15 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+
+#Function for user didnt give the required information then shows the helper message
+function helper{
+ expected_cmd_args=2
+ if [ $# -ne $expected_cmd_args]; then
+ echo " please excute the required arguments "
+ echo " username,token,organization name,repo name"
+}
+
 
 # Main script
 
