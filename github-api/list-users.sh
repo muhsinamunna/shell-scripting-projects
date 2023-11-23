@@ -1,4 +1,14 @@
 #!/bin/bash
+##################
+#Author- Muhsina
+#Date- Nov 2023
+#this code is used to list all the people who have particular access to the repo
+#Need arguments are 4
+#Username,token,organization name and repo name
+#################
+
+helper()
+
 
 # GitHub API URL
 API_URL="https://api.github.com"
@@ -36,6 +46,13 @@ function list_users_with_read_access {
     fi
 }
 
+function helper {
+    expexted_cmd_args=2
+    if { $# -ne $expected_cmd_args}
+        echo "please run the script with required arguments"
+        echo "asd"
+    
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
